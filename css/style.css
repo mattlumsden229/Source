@@ -1,0 +1,175 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+html{
+     font-family: 'Nunito', sans-serif;
+}
+header{
+     height: 200px;
+     margin-top: -90px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+nav{
+     width: 20%;
+}
+nav ul{
+     display: flex;
+     justify-content: space-between;
+     flex-direction: row;
+}
+header nav ul li{
+     display: flex;
+}
+header nav ul li a,header h3{
+     text-decoration: none;
+     color: rgb(23, 27, 66);
+}
+header nav ul li a{
+     font-size: smaller;
+}
+header h3{
+     margin-left: 10px;
+}
+header button{
+     margin-top: 5px;
+     margin-right: 10px;
+     padding: 3px 12px 3px 12px;
+     background-color: rgb(23, 27, 66);
+     color: white;
+     border: none;
+     font-size: 13px;
+}
+main{
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+}
+main h1, main p{
+     color: rgb(23, 27, 66);
+}
+main span{
+     font-size: 15px;
+}
+main h1{
+     font-size: 50px;
+     font-weight: bolder;
+     margin: 10px 0 10px 0;
+}
+main p{
+     font-size: 15px;
+
+}
+main button{
+     padding: 3px 12px 3px 12px;
+     background-color: rgb(23, 27, 66);
+     color: white;
+     border: none;
+     font-size: 13px;
+}
+section.img img{
+     height: 350px;
+     width: 550px;
+}
+section.feat{
+     height: 250px;
+     display: flex;
+     justify-content: space-evenly;
+     flex-direction: row;
+     font-size: 15px;
+     color: rgb(23, 27, 66);
+}
+section.tagline input{
+     background-color: rgb(172, 189, 214, 0.5);
+}
+section.featOne a,section.featTwo a,section.featThree a,section.featFour a{
+     text-decoration: none;
+     color: rgb(23, 27, 66);
+}
+footer{
+     height: 175px;
+     display: flex;
+     align-items: center;
+     flex-direction: column;
+     width: 30%;
+     color: rgb(23, 27, 66);
+     margin-top: -25px;
+}
+footer h1{
+     margin-bottom: 10px;
+     font-size: 40px;
+}
+footer p{
+     font-size: 15px;
+}
+@media screen and (max-width: 600px){
+     nav{
+          display: none;
+     }
+     header button{
+          display: none;
+     }
+     header{
+          font-size: 30px;
+          flex-basis: 50%;
+          justify-content: flex-start;
+          gap: 130px;
+     }
+    
+     main{
+          flex-direction: column;
+          font-size: 10%
+     }
+     main p{
+          font-size: 15px;
+     }
+     section.feat,footer{
+          display: none;
+     }
+     section.img img{
+          height: 300px;
+          width: 400px;
+     }
+     section.tagline form{
+          display: flex;
+          flex-direction: column;
+     }
+     section.tagline input,section.tagline button{
+          margin: 0 5px 5px 5px;
+          padding: 5px 0 5px 0;
+     }
+}
+@media only screen and (min-width: 601px){
+     i#icon{
+          display: none;
+     }
+}
